@@ -30,7 +30,7 @@ void getFilesInDir(std::filesystem::path path)
 
                 std::string line;
                 std::smatch matches;
-                std::regex rgx("/([a-zA-Z0-9_]+\\.(?:png|jpg)).*");
+                std::regex rgx("/([a-zA-Z0-9_\\.]+\\.(?:png|jpg)).*");
                 if (csdFile.is_open())
                 {
                     while (getline(csdFile, line))
